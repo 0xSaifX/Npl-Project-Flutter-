@@ -1,0 +1,5 @@
+Analyzing figma...                                              
+
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\npl_theme.dart:23:9 - deprecated_member_use
+warning - Unused import: 'package:figma/npl_theme.dart' - lib\widgets\nav_bar.dart:1:8 - unused_import
+

@@ -1,0 +1,47 @@
+Analyzing figma...                                              
+
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\npl_theme.dart:23:9 - deprecated_member_use
+  error - The body might complete normally, causing 'null' to be returned, but the return type, 'Widget', is a potentially non-nullable type - lib\widgets\brand_section.dart:9:10 - body_might_complete_normally
+warning - The declaration 'build' isn't referenced - lib\widgets\brand_section.dart:11:10 - unused_element
+  error - The method '_BrandCard' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:48:20 - undefined_method
+  error - The values in a const list literal must be constants - lib\widgets\brand_section.dart:48:20 - non_constant_list_element
+  error - The method '_BrandCard' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:54:20 - undefined_method
+  error - The values in a const list literal must be constants - lib\widgets\brand_section.dart:54:20 - non_constant_list_element
+  error - The method '_BrandCard' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:61:20 - undefined_method
+  error - The values in a const list literal must be constants - lib\widgets\brand_section.dart:61:20 - non_constant_list_element
+  error - The method '_BrandCard' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:67:21 - undefined_method
+  error - The values in a const list literal must be constants - lib\widgets\brand_section.dart:67:21 - non_constant_list_element
+  error - The method '_BrandCard' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:74:21 - undefined_method
+  error - The values in a const list literal must be constants - lib\widgets\brand_section.dart:74:21 - non_constant_list_element
+  error - The method '_BrandCard' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:81:21 - undefined_method
+  error - The values in a const list literal must be constants - lib\widgets\brand_section.dart:81:21 - non_constant_list_element
+  error - Classes can't be declared inside other classes - lib\widgets\brand_section.dart:98:1 - class_in_class
+  error - Expected a class member - lib\widgets\brand_section.dart:98:18 - expected_class_member
+   info - The variable name 'StatelessWidget' isn't a lowerCamelCase identifier - lib\widgets\brand_section.dart:98:26 - non_constant_identifier_names
+  error - Methods must have an explicit list of parameters - lib\widgets\brand_section.dart:98:26 - missing_method_parameters
+warning - The value of the local variable 'isIconBrand' isn't used - lib\widgets\brand_section.dart:103:14 - unused_local_variable
+  error - The name '_BrandCard' isn't a class - lib\widgets\brand_section.dart:106:9 - creation_with_non_type
+   info - 'required' is deprecated and shouldn't be used. In Dart 2.12 and later, use the built-in `required` keyword to mark a named parameter as required - lib\widgets\brand_section.dart:107:5 - deprecated_member_use
+  error - Expected to find ',' - lib\widgets\brand_section.dart:107:14 - expected_token
+  error - The getter 'name' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:107:19 - undefined_getter
+   info - 'required' is deprecated and shouldn't be used. In Dart 2.12 and later, use the built-in `required` keyword to mark a named parameter as required - lib\widgets\brand_section.dart:108:5 - deprecated_member_use
+  error - Expected to find ',' - lib\widgets\brand_section.dart:108:14 - expected_token
+  error - The getter 'color' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:108:19 - undefined_getter
+  error - The getter 'icon' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:109:10 - undefined_getter
+  error - The getter 'iconColor' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:110:10 - undefined_getter
+  error - The setter 'isIconBrand' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:111:10 - undefined_setter
+   info - 'required' is deprecated and shouldn't be used. In Dart 2.12 and later, use the built-in `required` keyword to mark a named parameter as required - lib\widgets\brand_section.dart:112:5 - deprecated_member_use
+  error - Expected to find ',' - lib\widgets\brand_section.dart:112:14 - expected_token
+  error - The getter 'description' isn't defined for the type 'BrandSection' - lib\widgets\brand_section.dart:112:19 - undefined_getter
+warning - The declaration 'build' isn't referenced - lib\widgets\brand_section.dart:116:10 - unused_element
+  error - The final variable 'color' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:119:16 - read_potentially_unassigned_final
+warning - The operand must be 'null', so the condition is always 'false' - lib\widgets\brand_section.dart:125:20 - unnecessary_null_comparison
+  error - The final variable 'icon' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:125:20 - read_potentially_unassigned_final
+  error - The final variable 'icon' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:126:26 - read_potentially_unassigned_final
+  error - The final variable 'iconColor' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:126:49 - read_potentially_unassigned_final
+  error - The final variable 'name' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:127:24 - read_potentially_unassigned_final
+  error - The final variable 'description' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:136:22 - read_potentially_unassigned_final
+  error - The final variable 'iconColor' can't be read because it's potentially unassigned at this point - lib\widgets\brand_section.dart:136:59 - read_potentially_unassigned_final
+  error - Expected to find '}' - lib\widgets\brand_section.dart:145:1 - expected_token
+warning - Unused import: 'package:figma/npl_theme.dart' - lib\widgets\nav_bar.dart:1:8 - unused_import
+

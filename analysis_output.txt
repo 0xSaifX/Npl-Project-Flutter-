@@ -1,0 +1,16 @@
+Analyzing figma...                                              
+
+   info - 'background' is deprecated and shouldn't be used. Use surface instead. This feature was deprecated after v3.18.0-0.1.pre - lib\npl_theme.dart:23:9 - deprecated_member_use
+  error - Invalid constant value - lib\widgets\brand_section.dart:68:24 - invalid_constant
+  error - The getter 'litecoin' isn't defined for the type 'FontAwesomeIcons' - lib\widgets\brand_section.dart:68:41 - undefined_getter
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\hero_section.dart:22:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\hero_section.dart:105:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\media_section.dart:69:37 - deprecated_member_use
+warning - Unused import: 'package:figma/npl_theme.dart' - lib\widgets\nav_bar.dart:1:8 - unused_import
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\popular_section.dart:84:33 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\popular_section.dart:96:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\popular_section.dart:122:46 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\popular_section.dart:129:47 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\widgets\service_section.dart:85:32 - deprecated_member_use
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+
