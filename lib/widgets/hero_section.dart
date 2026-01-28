@@ -72,17 +72,27 @@ class _HeroSectionState extends State<HeroSection> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        final isMobile = constraints.maxWidth < 900;
+        final width = constraints.maxWidth;
+        final isSmallMobile = width < 375;
+        final isMobile = width < 600;
+        final isTablet = width >= 600 && width < 900;
+        final isDesktop = width >= 900;
 
         return Container(
           padding: EdgeInsets.symmetric(
-            horizontal: isMobile ? 20 : 100,
-            vertical: isMobile ? 30 : 60,
+            horizontal: isSmallMobile
+                ? 12
+                : (isMobile ? 20 : (isTablet ? 40 : 100)),
+            vertical: isSmallMobile
+                ? 20
+                : (isMobile ? 30 : (isTablet ? 40 : 60)),
           ),
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 600),
+            constraints: BoxConstraints(
+              maxHeight: isSmallMobile ? 400 : (isMobile ? 500 : 600),
+            ),
             child: Flex(
-              direction: isMobile ? Axis.vertical : Axis.horizontal,
+              direction: isDesktop ? Axis.horizontal : Axis.vertical,
               children: [
                 Expanded(
                   flex: 1, // Always give space to content
@@ -97,7 +107,10 @@ class _HeroSectionState extends State<HeroSection> {
                     itemBuilder: (context, index) {
                       final data = _sliderData[index];
                       return _HeroContent(
+                        isSmallMobile: isSmallMobile,
                         isMobile: isMobile,
+                        isTablet: isTablet,
+                        isDesktop: isDesktop,
                         data: data,
                         currentPage: _currentPage,
                         totalPage: _sliderData.length,
@@ -105,15 +118,21 @@ class _HeroSectionState extends State<HeroSection> {
                     },
                   ),
                 ),
-                if (!isMobile) ...[
+                if (isDesktop) ...[
                   HeroImage(
+                    isSmallMobile: isSmallMobile,
                     isMobile: isMobile,
+                    isTablet: isTablet,
+                    isDesktop: isDesktop,
                     data: _sliderData[_currentPage],
                   ),
                 ] else ...[
                   const SizedBox(height: 20),
                   HeroImage(
+                    isSmallMobile: isSmallMobile,
                     isMobile: isMobile,
+                    isTablet: isTablet,
+                    isDesktop: isDesktop,
                     data: _sliderData[_currentPage],
                   ),
                 ],
@@ -127,13 +146,19 @@ class _HeroSectionState extends State<HeroSection> {
 }
 
 class _HeroContent extends StatelessWidget {
+  final bool isSmallMobile;
   final bool isMobile;
+  final bool isTablet;
+  final bool isDesktop;
   final Map<String, dynamic> data;
   final int currentPage;
   final int totalPage;
 
   const _HeroContent({
+    required this.isSmallMobile,
     required this.isMobile,
+    required this.isTablet,
+    required this.isDesktop,
     required this.data,
     required this.currentPage,
     required this.totalPage,
@@ -146,27 +171,33 @@ class _HeroContent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Wrap(
-          spacing: 10,
+          spacing: isSmallMobile ? 5 : 10,
           runSpacing: 8,
           children: [
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+              padding: EdgeInsets.symmetric(
+                horizontal: isSmallMobile ? 8 : 12,
+                vertical: isSmallMobile ? 4 : 6,
+              ),
               decoration: BoxDecoration(
                 color: Colors.orange.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Text(
                 data["tag"],
-                style: const TextStyle(
+                style: TextStyle(
                   color: AppColors.primaryOrange,
                   fontWeight: FontWeight.bold,
-                  fontSize: 12,
+                  fontSize: isSmallMobile ? 10 : 12,
                 ),
               ),
             ),
-            const Text(
+            Text(
               "오직 풀하우스에서만!",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: isSmallMobile ? 11 : 13,
+              ),
             ),
           ],
         ),
@@ -174,7 +205,9 @@ class _HeroContent extends StatelessWidget {
         Text(
           data["title"],
           style: TextStyle(
-            fontSize: isMobile ? 40 : 56,
+            fontSize: isSmallMobile
+                ? 28
+                : (isMobile ? 40 : (isTablet ? 48 : 56)),
             fontWeight: FontWeight.w900,
             color: AppColors.darkText,
             height: 1.2,
