@@ -5,14 +5,10 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-          onTap: () {
-            // Navigate to social media
-          },
-          child: LayoutBuilder(
+    return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 1100;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 30 : 60,
@@ -21,19 +17,7 @@ class Footer extends StatelessWidget {
           color: const Color(0xFF111111),
           child: Column(
             children: [
-              IconButton(
-                icon: Icon(Icons.facebook),
-                onPressed: () {
-                  // Open Facebook
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.twitter),
-                onPressed: () {
-                  // Open Twitter
-                },
-              ),
-              if (isMobile) 
+              if (isMobile)
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -42,14 +26,18 @@ class Footer extends StatelessWidget {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Expanded(child: _FooterColumn(
-                          title: "회사",
-                          items: const ["소개", "팀", "채용", "블로그"],
-                        )),
-                        Expanded(child: _FooterColumn(
-                          title: "서비스",
-                          items: const ["NPL 경매", "컨설팅", "분석", "리포트"],
-                        )),
+                        Expanded(
+                          child: _FooterColumn(
+                            title: "회사",
+                            items: const ["소개", "팀", "채용", "블로그"],
+                          ),
+                        ),
+                        Expanded(
+                          child: _FooterColumn(
+                            title: "서비스",
+                            items: const ["NPL 경매", "컨설팅", "분석", "리포트"],
+                          ),
+                        ),
                       ],
                     ),
                     const SizedBox(height: 20),
@@ -94,21 +82,27 @@ class Footer extends StatelessWidget {
                   ),
                   if (isMobile) const SizedBox(height: 20),
                   Row(
-                    mainAxisAlignment: isMobile ? MainAxisAlignment.center : MainAxisAlignment.start,
+                    mainAxisAlignment: isMobile
+                        ? MainAxisAlignment.center
+                        : MainAxisAlignment.start,
                     children: const [
                       Icon(Icons.facebook, color: Colors.white, size: 20),
                       SizedBox(width: 20),
                       Icon(Icons.camera_alt, color: Colors.white, size: 20),
                       SizedBox(width: 20),
-                      Icon(Icons.alternate_email, color: Colors.white, size: 20),
+                      Icon(
+                        Icons.alternate_email,
+                        color: Colors.white,
+                        size: 20,
+                      ),
                     ],
-                  )
+                  ),
                 ],
-              )
+              ),
             ],
           ),
         );
-      }
+      },
     );
   }
 }
@@ -130,11 +124,7 @@ class _LogoColumn extends StatelessWidget {
         const SizedBox(height: 20),
         Text(
           "NPL 마케팅 플랫폼\n스마트한 투자의 시작.",
-          style: TextStyle(
-            color: Colors.grey[400],
-            fontSize: 12,
-            height: 1.5,
-          ),
+          style: TextStyle(color: Colors.grey[400], fontSize: 12, height: 1.5),
         ),
       ],
     );
@@ -161,16 +151,15 @@ class _FooterColumn extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        ...items.map((item) => Padding(
-              padding: const EdgeInsets.only(bottom: 10),
-              child: Text(
-                item,
-                style: TextStyle(
-                  color: Colors.grey[400],
-                  fontSize: 14,
-                ),
-              ),
-            )),
+        ...items.map(
+          (item) => Padding(
+            padding: const EdgeInsets.only(bottom: 10),
+            child: Text(
+              item,
+              style: TextStyle(color: Colors.grey[400], fontSize: 14),
+            ),
+          ),
+        ),
       ],
     );
   }
