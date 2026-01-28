@@ -73,7 +73,7 @@ class _HeroSectionState extends State<HeroSection> {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 900;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             horizontal: isMobile ? 20 : 100,
@@ -106,16 +106,22 @@ class _HeroSectionState extends State<HeroSection> {
                   ),
                 ),
                 if (!isMobile) ...[
-                   HeroImage(isMobile: isMobile, data: _sliderData[_currentPage]),
+                  HeroImage(
+                    isMobile: isMobile,
+                    data: _sliderData[_currentPage],
+                  ),
                 ] else ...[
-                   const SizedBox(height: 20),
-                   HeroImage(isMobile: isMobile, data: _sliderData[_currentPage]),
-                ]
+                  const SizedBox(height: 20),
+                  HeroImage(
+                    isMobile: isMobile,
+                    data: _sliderData[_currentPage],
+                  ),
+                ],
               ],
             ),
           ),
         );
-      }
+      },
     );
   }
 }
@@ -139,7 +145,9 @@ class _HeroContent extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Row(
+        Wrap(
+          spacing: 10,
+          runSpacing: 8,
           children: [
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -156,8 +164,10 @@ class _HeroContent extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(width: 10),
-            const Text("오직 풀하우스에서만!", style: TextStyle(fontWeight: FontWeight.bold)),
+            const Text(
+              "오직 풀하우스에서만!",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+            ),
           ],
         ),
         const SizedBox(height: 20),
@@ -172,8 +182,14 @@ class _HeroContent extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 30),
-        Row(
-          children: List.generate(totalPage, (index) => _IndicatorDot(isActive: index == currentPage)),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: List.generate(
+              totalPage,
+              (index) => _IndicatorDot(isActive: index == currentPage),
+            ),
+          ),
         ),
         if (isMobile) const SizedBox(height: 30),
       ],
@@ -196,12 +212,12 @@ class HeroImage extends StatelessWidget {
         color: AppColors.heroBlue,
         borderRadius: BorderRadius.circular(40),
         boxShadow: const [
-           BoxShadow(
-             color: Colors.black12,
-             blurRadius: 30,
-             offset: Offset(0, 10),
-           )
-        ]
+          BoxShadow(
+            color: Colors.black12,
+            blurRadius: 30,
+            offset: Offset(0, 10),
+          ),
+        ],
       ),
       child: Stack(
         alignment: Alignment.center,
@@ -212,14 +228,15 @@ class HeroImage extends StatelessWidget {
             right: 50,
             child: Icon(Icons.circle, size: 40, color: Colors.yellow[700]),
           ),
-           Positioned(
+          Positioned(
             bottom: 80,
             left: 60,
             child: Icon(Icons.circle, size: 50, color: Colors.yellow[800]),
           ),
           Transform.rotate(
             angle: -0.2,
-            child: AnimatedContainer( // Animated container for smooth color transition
+            child: AnimatedContainer(
+              // Animated container for smooth color transition
               duration: const Duration(milliseconds: 500),
               width: isMobile ? 160 : 200,
               height: isMobile ? 200 : 250,
@@ -234,7 +251,7 @@ class HeroImage extends StatelessWidget {
                   ),
                 ],
               ),
-               child: Center(
+              child: Center(
                 child: Text(
                   data["icon"],
                   style: TextStyle(
@@ -258,7 +275,8 @@ class _IndicatorDot extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer( // Animated indicator
+    return AnimatedContainer(
+      // Animated indicator
       duration: const Duration(milliseconds: 300),
       margin: const EdgeInsets.only(right: 8),
       width: isActive ? 30 : 10,
