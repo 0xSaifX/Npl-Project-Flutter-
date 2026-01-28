@@ -36,7 +36,7 @@ class _GuideHeroSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           height: isMobile ? 300 : 400,
           decoration: BoxDecoration(
@@ -96,7 +96,7 @@ class _WhyChooseSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 80,
@@ -202,7 +202,11 @@ class _WhyChooseSection extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(width: 10),
-                      const Icon(Icons.arrow_forward, color: Colors.white, size: 18),
+                      const Icon(
+                        Icons.arrow_forward,
+                        color: Colors.white,
+                        size: 18,
+                      ),
                     ],
                   ),
                 ),
@@ -231,8 +235,8 @@ class _BenefitCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
-        return Container(
+
+        return SizedBox(
           width: isMobile ? double.infinity : 200,
           child: Column(
             children: [
@@ -286,8 +290,9 @@ class _PropertyListSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        final isTablet = constraints.maxWidth >= 600 && constraints.maxWidth < 900;
-        
+        final isTablet =
+            constraints.maxWidth >= 600 && constraints.maxWidth < 900;
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 80,
@@ -341,42 +346,50 @@ class _PropertyListSection extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: const [
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600596542815-2a4d04774c13?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600596542815-2a4d04774c13?auto=format&fit=crop&q=80&w=400",
                     title: "서울 오피스 빌딩",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400",
                     title: "서울 빌딩 빌딩",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸 빈칸 빈칸",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=400",
                     title: "서울 빈칸빈칸빈칸",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸 빈칸 빈칸",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=400",
                     title: "서울 빈칸 빌딩",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸 빈칸 빈칸빈칸",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
                   _PropertyCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=400",
                     title: "서울 빈칸",
                     subtitle: "빈칸 · 빈칸 빈칸 빈칸",
                   ),
@@ -404,9 +417,7 @@ class _FilterTab extends StatelessWidget {
       decoration: BoxDecoration(
         color: isActive ? Colors.black : Colors.white,
         borderRadius: BorderRadius.circular(25),
-        border: Border.all(
-          color: isActive ? Colors.black : Colors.grey[300]!,
-        ),
+        border: Border.all(color: isActive ? Colors.black : Colors.grey[300]!),
       ),
       child: Text(
         text,
@@ -457,13 +468,7 @@ class _PropertyCard extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 5),
-        Text(
-          subtitle,
-          style: TextStyle(
-            fontSize: 13,
-            color: Colors.grey[600],
-          ),
-        ),
+        Text(subtitle, style: TextStyle(fontSize: 13, color: Colors.grey[600])),
       ],
     );
   }
@@ -478,7 +483,7 @@ class _PartnerBrandsSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 80,
@@ -585,7 +590,9 @@ class _BrandLogo extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-            fontSize: text.contains("💳") || text.contains("⏰") ? (isMobile ? 30 : 40) : (isMobile ? 18 : 24),
+            fontSize: text.contains("💳") || text.contains("⏰")
+                ? (isMobile ? 30 : 40)
+                : (isMobile ? 18 : 24),
             fontWeight: FontWeight.w900,
             color: bgColor == Colors.blue[900] ? Colors.white : Colors.black,
           ),
@@ -619,10 +626,7 @@ class _BrandDescription extends StatelessWidget {
           const SizedBox(height: 5),
           Text(
             subtitle,
-            style: TextStyle(
-              fontSize: 12,
-              color: Colors.grey[600],
-            ),
+            style: TextStyle(fontSize: 12, color: Colors.grey[600]),
             textAlign: TextAlign.center,
           ),
         ],
@@ -640,7 +644,7 @@ class _GuideFAQSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 80,

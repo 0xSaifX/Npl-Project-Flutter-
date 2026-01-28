@@ -38,7 +38,7 @@ class _ProjectHeroSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           height: isMobile ? 250 : 350,
           decoration: BoxDecoration(
@@ -98,7 +98,7 @@ class _ProjectTabSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 20 : 30,
@@ -163,7 +163,7 @@ class _OnlyBrandsSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 60,
@@ -193,15 +193,40 @@ class _OnlyBrandsSection extends StatelessWidget {
               isMobile
                   ? Column(
                       children: const [
-                        _BrandCard("Klarna.", Colors.pink, "유연한 결제", "간편하고 빠른 결제"),
+                        _BrandCard(
+                          "Klarna.",
+                          Colors.pink,
+                          "유연한 결제",
+                          "간편하고 빠른 결제",
+                        ),
                         SizedBox(height: 20),
-                        _BrandCard("💳", Colors.orange, "마스터카드 특별혜택", "빠르고 안전한 거래"),
+                        _BrandCard(
+                          "💳",
+                          Colors.orange,
+                          "마스터카드 특별혜택",
+                          "빠르고 안전한 거래",
+                        ),
                         SizedBox(height: 20),
-                        _BrandCard("Skrill", Colors.purple, "스크릴 디지털월렛", "빠르고 안전한 거래"),
+                        _BrandCard(
+                          "Skrill",
+                          Colors.purple,
+                          "스크릴 디지털월렛",
+                          "빠르고 안전한 거래",
+                        ),
                         SizedBox(height: 20),
-                        _BrandCard("amazon", Colors.orange, "아마존 쇼핑리워드", "다양한 혜택 제공"),
+                        _BrandCard(
+                          "amazon",
+                          Colors.orange,
+                          "아마존 쇼핑리워드",
+                          "다양한 혜택 제공",
+                        ),
                         SizedBox(height: 20),
-                        _BrandCard("amazon", Colors.orange, "아마존 쇼핑리워드", "다양한 혜택 제공"),
+                        _BrandCard(
+                          "amazon",
+                          Colors.orange,
+                          "아마존 쇼핑리워드",
+                          "다양한 혜택 제공",
+                        ),
                       ],
                     )
                   : Wrap(
@@ -209,11 +234,36 @@ class _OnlyBrandsSection extends StatelessWidget {
                       runSpacing: 20,
                       alignment: WrapAlignment.center,
                       children: const [
-                        _BrandCard("Klarna.", Colors.pink, "유연한 결제", "간편하고 빠른 결제"),
-                        _BrandCard("💳", Colors.orange, "마스터카드 특별혜택", "빠르고 안전한 거래"),
-                        _BrandCard("Skrill", Colors.purple, "스크릴 디지털월렛", "빠르고 안전한 거래"),
-                        _BrandCard("amazon", Colors.orange, "아마존 쇼핑리워드", "다양한 혜택 제공"),
-                        _BrandCard("amazon", Colors.orange, "아마존 쇼핑리워드", "다양한 혜택 제공"),
+                        _BrandCard(
+                          "Klarna.",
+                          Colors.pink,
+                          "유연한 결제",
+                          "간편하고 빠른 결제",
+                        ),
+                        _BrandCard(
+                          "💳",
+                          Colors.orange,
+                          "마스터카드 특별혜택",
+                          "빠르고 안전한 거래",
+                        ),
+                        _BrandCard(
+                          "Skrill",
+                          Colors.purple,
+                          "스크릴 디지털월렛",
+                          "빠르고 안전한 거래",
+                        ),
+                        _BrandCard(
+                          "amazon",
+                          Colors.orange,
+                          "아마존 쇼핑리워드",
+                          "다양한 혜택 제공",
+                        ),
+                        _BrandCard(
+                          "amazon",
+                          Colors.orange,
+                          "아마존 쇼핑리워드",
+                          "다양한 혜택 제공",
+                        ),
                       ],
                     ),
             ],
@@ -237,8 +287,8 @@ class _BrandCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
-        return Container(
+
+        return SizedBox(
           width: isMobile ? double.infinity : 180,
           child: Column(
             children: [
@@ -253,7 +303,9 @@ class _BrandCard extends StatelessWidget {
                   child: Text(
                     logo,
                     style: TextStyle(
-                      fontSize: logo.contains("💳") ? (isMobile ? 30 : 40) : (isMobile ? 18 : 22),
+                      fontSize: logo.contains("💳")
+                          ? (isMobile ? 30 : 40)
+                          : (isMobile ? 18 : 22),
                       fontWeight: FontWeight.w900,
                       color: Colors.black,
                     ),
@@ -296,7 +348,7 @@ class _GreenBannerSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           margin: EdgeInsets.symmetric(
             horizontal: isMobile ? 20 : 100,
@@ -305,10 +357,7 @@ class _GreenBannerSection extends StatelessWidget {
           padding: EdgeInsets.all(isMobile ? 30 : 40),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                const Color(0xFFD4F1C5),
-                const Color(0xFFB8E99F),
-              ],
+              colors: [const Color(0xFFD4F1C5), const Color(0xFFB8E99F)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -348,11 +397,7 @@ class _GreenBannerSection extends StatelessWidget {
                   ],
                 ),
               ),
-              if (!isMobile)
-                Text(
-                  "🌿",
-                  style: TextStyle(fontSize: 80),
-                ),
+              if (!isMobile) Text("🌿", style: TextStyle(fontSize: 80)),
             ],
           ),
         );
@@ -370,8 +415,9 @@ class _InteriorSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        final isTablet = constraints.maxWidth >= 600 && constraints.maxWidth < 900;
-        
+        final isTablet =
+            constraints.maxWidth >= 600 && constraints.maxWidth < 900;
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 60,
@@ -422,49 +468,57 @@ class _InteriorSection extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: const [
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸빈칸빈칸빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸빈칸빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸 빈칸빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸빈칸빈칸빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸빈칸빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸빈칸빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
                   ),
                   _InteriorCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸",
                     title: "빈칸 빈칸",
                     price: "빈칸빈칸 · 빈칸빈칸",
@@ -480,13 +534,14 @@ class _InteriorSection extends StatelessWidget {
                     children: [
                       Text(
                         "빈칸빈칸 빈칸빈칸빈칸",
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 14,
-                        ),
+                        style: TextStyle(color: Colors.grey[700], fontSize: 14),
                       ),
                       const SizedBox(width: 5),
-                      Icon(Icons.arrow_forward, size: 16, color: Colors.grey[700]),
+                      Icon(
+                        Icons.arrow_forward,
+                        size: 16,
+                        color: Colors.grey[700],
+                      ),
                     ],
                   ),
                 ),
@@ -513,9 +568,7 @@ class _FilterChip extends StatelessWidget {
       decoration: BoxDecoration(
         color: isActive ? Colors.black : Colors.white,
         borderRadius: BorderRadius.circular(25),
-        border: Border.all(
-          color: isActive ? Colors.black : Colors.grey[300]!,
-        ),
+        border: Border.all(color: isActive ? Colors.black : Colors.grey[300]!),
       ),
       child: Text(
         text,
@@ -577,13 +630,7 @@ class _InteriorCard extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 3),
-        Text(
-          price,
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.grey[600],
-          ),
-        ),
+        Text(price, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
       ],
     );
   }
@@ -598,8 +645,9 @@ class _MaterialsSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        final isTablet = constraints.maxWidth >= 600 && constraints.maxWidth < 900;
-        
+        final isTablet =
+            constraints.maxWidth >= 600 && constraints.maxWidth < 900;
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 60,
@@ -651,42 +699,50 @@ class _MaterialsSection extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: const [
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1615971677499-5467cbab01c0?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 빈칸 빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸빈칸 빈칸 빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 빈칸빈칸 빈칸 빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸 빈칸빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸빈칸 빈칸빈칸빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 빈칸빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
                   _MaterialCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 빈칸빈칸",
                     price: "빈칸 빈칸빈칸빈칸빈칸",
                   ),
@@ -737,13 +793,7 @@ class _MaterialCard extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 5),
-        Text(
-          price,
-          style: TextStyle(
-            fontSize: 12,
-            color: Colors.grey[600],
-          ),
-        ),
+        Text(price, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
       ],
     );
   }
@@ -758,7 +808,7 @@ class _BottomCTASection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           margin: EdgeInsets.symmetric(
             horizontal: isMobile ? 20 : 100,
@@ -767,10 +817,7 @@ class _BottomCTASection extends StatelessWidget {
           padding: EdgeInsets.all(isMobile ? 40 : 60),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                const Color(0xFF4A90E2),
-                const Color(0xFF357ABD),
-              ],
+              colors: [const Color(0xFF4A90E2), const Color(0xFF357ABD)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -810,11 +857,7 @@ class _BottomCTASection extends StatelessWidget {
                   ],
                 ),
               ),
-              if (!isMobile)
-                Text(
-                  "📦",
-                  style: TextStyle(fontSize: 80),
-                ),
+              if (!isMobile) Text("📦", style: TextStyle(fontSize: 80)),
             ],
           ),
         );
