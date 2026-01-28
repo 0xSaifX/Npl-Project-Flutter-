@@ -223,10 +223,7 @@ class _SocialIconButton extends StatelessWidget {
   final IconData icon;
   final String url;
 
-  const _SocialIconButton({
-    required this.icon,
-    required this.url,
-  });
+  const _SocialIconButton({required this.icon, required this.url});
 
   @override
   Widget build(BuildContext context) {
