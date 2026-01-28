@@ -277,7 +277,7 @@ class _GreenBannerSection extends StatelessWidget {
                     ),
                     SizedBox(height: isMobile ? 8 : 10),
                     Text(
-                      "빈칸빈칸 빈칸빈칸 빈칸빈칸 빈칸빈칸빈칸 빈칸빈칸빈칸 빈칸빈칸빈칸!",
+                      "   빈칸 빈칸 빈칸!",
                       style: TextStyle(
                         fontSize: isMobile ? 16 : 20,
                         fontWeight: FontWeight.bold,
@@ -286,7 +286,7 @@ class _GreenBannerSection extends StatelessWidget {
                     ),
                     SizedBox(height: isMobile ? 5 : 8),
                     Text(
-                      "빈칸빈칸 빈칸빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸빈칸빈칸",
+                      "빈칸빈칸 마스터카드 특별 혜택 마스터카드 특별 혜택 빈칸빈칸 빈칸빈칸 빈칸빈칸",
                       style: TextStyle(
                         fontSize: isMobile ? 11 : 13,
                         color: Colors.green[700],
@@ -334,7 +334,7 @@ class _EducationSection extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                "빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸빈칸",
+                "마스터카드 특별 혜택 마스터카드 특별 혜택 수빈칸빈칸 ",
                 style: TextStyle(
                   fontSize: isMobile ? 12 : 14,
                   color: Colors.grey[600],
