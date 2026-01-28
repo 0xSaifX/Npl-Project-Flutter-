@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Footer extends StatelessWidget {
   const Footer({super.key});
@@ -76,24 +77,37 @@ class Footer extends StatelessWidget {
                 direction: isMobile ? Axis.vertical : Axis.horizontal,
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
-                    "© 2023 FULLHOUSE. 모든 권리 보유.",
-                    style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                  InkWell(
+                    onTap: () async {
+                      const url = 'https://fullhouse.com/contact';
+                      if (await canLaunchUrl(Uri.parse(url))) {
+                        await launchUrl(Uri.parse(url));
+                      }
+                    },
+                    child: Text(
+                      "© 2023 FULLHOUSE. 모든 권리 보유.",
+                      style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                    ),
                   ),
                   if (isMobile) const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: isMobile
                         ? MainAxisAlignment.center
                         : MainAxisAlignment.start,
-                    children: const [
-                      Icon(Icons.facebook, color: Colors.white, size: 20),
-                      SizedBox(width: 20),
-                      Icon(Icons.camera_alt, color: Colors.white, size: 20),
-                      SizedBox(width: 20),
-                      Icon(
-                        Icons.alternate_email,
-                        color: Colors.white,
-                        size: 20,
+                    children: [
+                      _SocialIconButton(
+                        icon: Icons.facebook,
+                        url: 'https://www.facebook.com/fullhouse',
+                      ),
+                      const SizedBox(width: 20),
+                      _SocialIconButton(
+                        icon: Icons.camera_alt,
+                        url: 'https://www.instagram.com/fullhouse',
+                      ),
+                      const SizedBox(width: 20),
+                      _SocialIconButton(
+                        icon: Icons.alternate_email,
+                        url: 'https://twitter.com/fullhouse',
                       ),
                     ],
                   ),
@@ -154,13 +168,75 @@ class _FooterColumn extends StatelessWidget {
         ...items.map(
           (item) => Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: Text(
-              item,
-              style: TextStyle(color: Colors.grey[400], fontSize: 14),
+            child: InkWell(
+              onTap: () async {
+                final url = _getUrlForItem(item);
+                if (await canLaunchUrl(Uri.parse(url))) {
+                  await launchUrl(Uri.parse(url));
+                }
+              },
+              child: Text(
+                item,
+                style: TextStyle(color: Colors.grey[400], fontSize: 14),
+              ),
             ),
           ),
         ),
       ],
+    );
+  }
+
+  String _getUrlForItem(String item) {
+    const baseUrl = 'https://fullhouse.com';
+    switch (item) {
+      case '소개':
+        return '$baseUrl/about';
+      case '팀':
+        return '$baseUrl/team';
+      case '채용':
+        return '$baseUrl/careers';
+      case '블로그':
+        return '$baseUrl/blog';
+      case 'NPL 경매':
+        return '$baseUrl/auction';
+      case '컨설팅':
+        return '$baseUrl/consulting';
+      case '분석':
+        return '$baseUrl/analysis';
+      case '리포트':
+        return '$baseUrl/reports';
+      case '고객센터':
+        return '$baseUrl/support';
+      case '이용약관':
+        return '$baseUrl/terms';
+      case '개인정보처리방침':
+        return '$baseUrl/privacy';
+      case '문의하기':
+        return '$baseUrl/contact';
+      default:
+        return baseUrl;
+    }
+  }
+}
+
+class _SocialIconButton extends StatelessWidget {
+  final IconData icon;
+  final String url;
+
+  const _SocialIconButton({
+    required this.icon,
+    required this.url,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () async {
+        if (await canLaunchUrl(Uri.parse(url))) {
+          await launchUrl(Uri.parse(url), mode: LaunchMode.externalApplication);
+        }
+      },
+      child: Icon(icon, color: Colors.white, size: 20),
     );
   }
 }
