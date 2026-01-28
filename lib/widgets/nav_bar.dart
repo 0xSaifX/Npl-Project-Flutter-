@@ -12,7 +12,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  bool _isDrawerOpen = false;
+  final bool _isDrawerOpen = false;
 
   @override
   Widget build(BuildContext context) {
