@@ -369,7 +369,7 @@ class _EducationSection extends StatelessWidget {
                     imageUrl:
                         "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸빈칸 수빈칸빈칸",
+                    title: "마스터카드 특별 혜택 수빈칸빈칸",
                   ),
                   _EducationCard(
                     imageUrl:
@@ -381,37 +381,37 @@ class _EducationSection extends StatelessWidget {
                     imageUrl:
                         "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸빈칸 빈칸",
+                    title: "마스터카드 특별 혜택 빈칸",
                   ),
                   _EducationCard(
                     imageUrl:
                         "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸빈칸 빈칸",
+                    title: " 마스터카드 특별 혜택 빈칸",
                   ),
                   _EducationCard(
                     imageUrl:
                         "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸빈칸빈칸",
+                    title: "마스터카드 특별 혜택 빈칸",
                   ),
                   _EducationCard(
                     imageUrl:
                         "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸 빈칸빈칸 빈칸",
+                    title: "빈칸 마스터카드 특별 혜택 빈칸",
                   ),
                   _EducationCard(
                     imageUrl:
                         "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸 빈칸빈칸빈칸",
+                    title: "빈칸 마스터카드 특별 혜택",
                   ),
                   _EducationCard(
                     imageUrl:
                         "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
-                    title: "빈칸빈칸 빈칸빈칸빈칸",
+                    title: " 마스터카드 특별 혜택 빈칸",
                   ),
                 ],
               ),
