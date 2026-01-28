@@ -145,7 +145,7 @@ class _TabButton extends StatelessWidget {
       child: Text(
         text,
         style: TextStyle(
-          color: isActive ? Colors.black : Colors.grey[600],
+          color: isActive ? Colors.white : Colors.grey[600],
           fontWeight: isActive ? FontWeight.bold : FontWeight.w500,
           fontSize: 15,
         ),
