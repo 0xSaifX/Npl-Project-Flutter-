@@ -556,7 +556,7 @@ class _BlogSection extends StatelessWidget {
                         "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400",
                     title: "전문가의 빈칸",
                     description:
-                        " 여기서만 제공되는 특별한 파트너십과 혜택                            뜬 칸",
+                        " 여기서만 제공되는 특별한 파트너십과 혜택 마스터카드 특별 혜택                          뜬 칸",
                     date: "2025 4.5",
                   ),
                   SizedBox(height: 20),
@@ -565,7 +565,7 @@ class _BlogSection extends StatelessWidget {
                         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
                     title: "  ",
                     description:
-                        "  여기서만 제공되는 특별한 파트너십과 혜택                                          ",
+                        "  여기서만 제공되는 특별한 파트너십과 혜택마스터카드 특별 혜택                                    ",
                     date: "2025 4.5 ",
                   ),
                   SizedBox(height: 20),
@@ -574,7 +574,7 @@ class _BlogSection extends StatelessWidget {
                         "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
                     title: "    ",
                     description:
-                        " 여기서만 제공되는 특별한 파트너십과 혜택                                            ",
+                        " 여기서만 제공되는 특별한 파트너십과 혜택 마스터카드 특별 혜택                                       ",
                     date: "2025 4.5 ",
                   ),
                   SizedBox(height: 20),
@@ -583,7 +583,7 @@ class _BlogSection extends StatelessWidget {
                         "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
                     title: "  ",
                     description:
-                        "   여기서만 제공되는 특별한 파트너십과 혜택                                          ",
+                        "   여기서만 제공되는 특별한 파트너십과 혜택 마스터카드 특별 혜택                                       ",
                     date: "2025 4.5 ",
                   ),
                 ],
