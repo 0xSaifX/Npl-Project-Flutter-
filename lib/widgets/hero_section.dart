@@ -231,16 +231,37 @@ class _HeroContent extends StatelessWidget {
 }
 
 class HeroImage extends StatelessWidget {
+  final bool isSmallMobile;
   final bool isMobile;
+  final bool isTablet;
+  final bool isDesktop;
   final Map<String, dynamic> data;
 
-  const HeroImage({super.key, required this.isMobile, required this.data});
+  const HeroImage({
+    super.key,
+    required this.isSmallMobile,
+    required this.isMobile,
+    required this.isTablet,
+    required this.isDesktop,
+    required this.data,
+  });
 
   @override
   Widget build(BuildContext context) {
+    final containerHeight = isSmallMobile
+        ? 250
+        : (isMobile ? 300 : (isTablet ? 350 : 400));
+    final containerWidth = isDesktop ? 500.0 : double.infinity;
+    final imageSize = isSmallMobile
+        ? 120
+        : (isMobile ? 160 : (isTablet ? 180 : 200));
+    final imageFontSize = isSmallMobile
+        ? 40
+        : (isMobile ? 60 : (isTablet ? 70 : 80));
+
     return Container(
-      width: isMobile ? double.infinity : 500,
-      height: isMobile ? 300 : 400,
+      width: containerWidth,
+      height: containerHeight.toDouble(),
       decoration: BoxDecoration(
         color: AppColors.heroBlue,
         borderRadius: BorderRadius.circular(40),
@@ -257,22 +278,30 @@ class HeroImage extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Positioned(
-            top: 50,
-            right: 50,
-            child: Icon(Icons.circle, size: 40, color: Colors.yellow[700]),
+            top: isSmallMobile ? 30 : 50,
+            right: isSmallMobile ? 30 : 50,
+            child: Icon(
+              Icons.circle,
+              size: isSmallMobile ? 25 : 40,
+              color: Colors.yellow[700],
+            ),
           ),
           Positioned(
-            bottom: 80,
-            left: 60,
-            child: Icon(Icons.circle, size: 50, color: Colors.yellow[800]),
+            bottom: isSmallMobile ? 60 : 80,
+            left: isSmallMobile ? 40 : 60,
+            child: Icon(
+              Icons.circle,
+              size: isSmallMobile ? 30 : 50,
+              color: Colors.yellow[800],
+            ),
           ),
           Transform.rotate(
             angle: -0.2,
             child: AnimatedContainer(
               // Animated container for smooth color transition
               duration: const Duration(milliseconds: 500),
-              width: isMobile ? 160 : 200,
-              height: isMobile ? 200 : 250,
+              width: imageSize.toDouble(),
+              height: imageSize.toDouble(),
               decoration: BoxDecoration(
                 color: data["color"],
                 borderRadius: BorderRadius.circular(30),
@@ -289,7 +318,7 @@ class HeroImage extends StatelessWidget {
                   data["icon"],
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: isMobile ? 60 : 80,
+                    fontSize: imageFontSize.toDouble(),
                     fontWeight: FontWeight.bold,
                   ),
                 ),
