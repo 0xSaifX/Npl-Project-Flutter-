@@ -5,7 +5,11 @@ class Footer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return LayoutBuilder(
+    return GestureDetector(
+          onTap: () {
+            // Navigate to social media
+          },
+          child: LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 1100;
         
@@ -17,6 +21,18 @@ class Footer extends StatelessWidget {
           color: const Color(0xFF111111),
           child: Column(
             children: [
+              IconButton(
+                icon: Icon(Icons.facebook),
+                onPressed: () {
+                  // Open Facebook
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.twitter),
+                onPressed: () {
+                  // Open Twitter
+                },
+              ),
               if (isMobile) 
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
