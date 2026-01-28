@@ -166,66 +166,83 @@ class _HeroContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Wrap(
-          spacing: isSmallMobile ? 5 : 10,
-          runSpacing: 8,
-          children: [
-            Container(
-              padding: EdgeInsets.symmetric(
-                horizontal: isSmallMobile ? 8 : 12,
-                vertical: isSmallMobile ? 4 : 6,
-              ),
-              decoration: BoxDecoration(
-                color: Colors.orange.withValues(alpha: 0.1),
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: Text(
-                data["tag"],
-                style: TextStyle(
-                  color: AppColors.primaryOrange,
-                  fontWeight: FontWeight.bold,
-                  fontSize: isSmallMobile ? 10 : 12,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(minHeight: constraints.maxHeight),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Wrap(
+                  spacing: isSmallMobile ? 5 : 10,
+                  runSpacing: 8,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: isSmallMobile ? 8 : 12,
+                        vertical: isSmallMobile ? 4 : 6,
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.orange.withValues(alpha: 0.1),
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Text(
+                        data["tag"],
+                        style: TextStyle(
+                          color: AppColors.primaryOrange,
+                          fontWeight: FontWeight.bold,
+                          fontSize: isSmallMobile ? 10 : 12,
+                        ),
+                      ),
+                    ),
+                    Text(
+                      "오직 풀하우스에서만!",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: isSmallMobile ? 11 : 13,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
+                const SizedBox(height: 20),
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxWidth: constraints.maxWidth - 16,
+                  ),
+                  child: Text(
+                    data["title"],
+                    style: TextStyle(
+                      fontSize: isSmallMobile
+                          ? 28
+                          : (isMobile ? 40 : (isTablet ? 48 : 56)),
+                      fontWeight: FontWeight.w900,
+                      color: AppColors.darkText,
+                      height: 1.2,
+                      fontFamily: 'NotoSans',
+                    ),
+                    maxLines: null,
+                    overflow: TextOverflow.visible,
+                    softWrap: true,
+                  ),
+                ),
+                const SizedBox(height: 30),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: List.generate(
+                      totalPage,
+                      (index) => _IndicatorDot(isActive: index == currentPage),
+                    ),
+                  ),
+                ),
+                if (isMobile) const SizedBox(height: 30),
+              ],
             ),
-            Text(
-              "오직 풀하우스에서만!",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: isSmallMobile ? 11 : 13,
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 20),
-        Text(
-          data["title"],
-          style: TextStyle(
-            fontSize: isSmallMobile
-                ? 28
-                : (isMobile ? 40 : (isTablet ? 48 : 56)),
-            fontWeight: FontWeight.w900,
-            color: AppColors.darkText,
-            height: 1.2,
-            fontFamily: 'NotoSans',
           ),
-        ),
-        const SizedBox(height: 30),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: List.generate(
-              totalPage,
-              (index) => _IndicatorDot(isActive: index == currentPage),
-            ),
-          ),
-        ),
-        if (isMobile) const SizedBox(height: 30),
-      ],
+        );
+      },
     );
   }
 }
