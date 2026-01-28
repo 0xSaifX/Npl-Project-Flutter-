@@ -563,7 +563,7 @@ class _BlogSection extends StatelessWidget {
                   _BlogCard(
                     imageUrl:
                         "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
-                    title: "  ",
+                    title: " 마스터카드 특별 혜택 ",
                     description:
                         "  여기서만 제공되는 특별한 파트너십과 혜택마스터카드 특별 혜택                                    ",
                     date: "2025 4.5 ",
