@@ -1,4 +1,4 @@
-import 'package:figma/npl_theme.dart';
+import 'package:npl_app/npl_theme.dart';
 import 'package:flutter/material.dart';
 
 class FAQSection extends StatelessWidget {
@@ -9,60 +9,57 @@ class FAQSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
-      padding: EdgeInsets.symmetric(
-        vertical: isMobile ? 40 : 80,
-        horizontal: isMobile ? 20 : 100,
-      ),
-      color: Colors.white,
-      child: Column(
-        children: [
-          const Text(
-            "자주 묻는 질문",
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-              color: AppColors.darkText,
-            ),
+          padding: EdgeInsets.symmetric(
+            vertical: isMobile ? 40 : 80,
+            horizontal: isMobile ? 20 : 100,
           ),
-          const SizedBox(height: 10),
-          Text(
-            "일반적인 질문에 대한 답변을 찾아보세요.",
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[500],
-            ),
-          ),
-          const SizedBox(height: 40),
-          // Tabs
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+          color: Colors.white,
+          child: Column(
             children: [
-              _FAQTab("전체", isActive: true),
-              _FAQTab("서비스"),
-              _FAQTab("투자"),
-              _FAQTab("계정"),
+              const Text(
+                "자주 묻는 질문",
+                style: TextStyle(
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  color: AppColors.darkText,
+                ),
+              ),
+              const SizedBox(height: 10),
+              Text(
+                "일반적인 질문에 대한 답변을 찾아보세요.",
+                style: TextStyle(fontSize: 14, color: Colors.grey[500]),
+              ),
+              const SizedBox(height: 40),
+              // Tabs
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  _FAQTab("전체", isActive: true),
+                  _FAQTab("서비스"),
+                  _FAQTab("투자"),
+                  _FAQTab("계정"),
+                ],
+              ),
+              const SizedBox(height: 40),
+              // List
+              const Column(
+                children: [
+                  _FAQItem(question: "NPL 투자를 어떻게 시작하나요?"),
+                  Divider(),
+                  _FAQItem(question: "수수료는 얼마인가요?"),
+                  Divider(),
+                  _FAQItem(question: "언제든지 자금을 인출할 수 있나요?"),
+                  Divider(),
+                  _FAQItem(question: "개인정보는 안전하게 보호되나요?"),
+                  Divider(),
+                ],
+              ),
             ],
           ),
-          const SizedBox(height: 40),
-          // List
-          const Column(
-            children: [
-              _FAQItem(question: "NPL 투자를 어떻게 시작하나요?"),
-              Divider(),
-              _FAQItem(question: "수수료는 얼마인가요?"),
-              Divider(),
-              _FAQItem(question: "언제든지 자금을 인출할 수 있나요?"),
-              Divider(),
-              _FAQItem(question: "개인정보는 안전하게 보호되나요?"),
-              Divider(),
-            ],
-          ),
-        ],
-      ),
-      );
-      }
+        );
+      },
     );
   }
 }

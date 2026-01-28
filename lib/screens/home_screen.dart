@@ -1,6 +1,6 @@
-import 'package:figma/task_manager.dart';
-import 'package:figma/widgets.dart';
-import 'package:figma/widgets/app_drawer.dart';
+import 'package:npl_app/task_manager.dart';
+import 'package:npl_app/widgets.dart';
+import 'package:npl_app/widgets/app_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

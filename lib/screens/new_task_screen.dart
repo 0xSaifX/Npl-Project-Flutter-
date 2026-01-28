@@ -1,5 +1,5 @@
-import 'package:figma/task_manager.dart';
-import 'package:figma/utils.dart';
+import 'package:npl_app/task_manager.dart';
+import 'package:npl_app/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

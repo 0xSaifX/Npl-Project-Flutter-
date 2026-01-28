@@ -1,4 +1,4 @@
-import 'package:figma/npl_theme.dart';
+import 'package:npl_app/npl_theme.dart';
 import 'package:flutter/material.dart';
 
 class MediaSection extends StatelessWidget {
@@ -28,36 +28,57 @@ class MediaSection extends StatelessWidget {
               const SizedBox(height: 10),
               Text(
                 "최신 업데이트와 스토리를 확인하세요.",
-                style: TextStyle(
-                  fontSize: 14,
-                  color: Colors.grey[500],
-                ),
+                style: TextStyle(fontSize: 14, color: Colors.grey[500]),
               ),
               const SizedBox(height: 50),
               if (isMobile)
                 Column(
                   children: const [
-                    _VideoCard(imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600"),
+                    _VideoCard(
+                      imageUrl:
+                          "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600",
+                    ),
                     SizedBox(height: 20),
-                    _VideoCard(imageUrl: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=600"),
+                    _VideoCard(
+                      imageUrl:
+                          "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=600",
+                    ),
                     SizedBox(height: 20),
-                    _VideoCard(imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600"),
+                    _VideoCard(
+                      imageUrl:
+                          "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600",
+                    ),
                   ],
                 )
               else
                 Row(
                   children: const [
-                    Expanded(child: _VideoCard(imageUrl: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600")),
+                    Expanded(
+                      child: _VideoCard(
+                        imageUrl:
+                            "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600",
+                      ),
+                    ),
                     SizedBox(width: 20),
-                    Expanded(child: _VideoCard(imageUrl: "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=600")),
+                    Expanded(
+                      child: _VideoCard(
+                        imageUrl:
+                            "https://images.unsplash.com/photo-1554469384-e58fac16e23a?auto=format&fit=crop&q=80&w=600",
+                      ),
+                    ),
                     SizedBox(width: 20),
-                    Expanded(child: _VideoCard(imageUrl: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600")),
+                    Expanded(
+                      child: _VideoCard(
+                        imageUrl:
+                            "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=600",
+                      ),
+                    ),
                   ],
                 ),
             ],
           ),
         );
-      }
+      },
     );
   }
 }
