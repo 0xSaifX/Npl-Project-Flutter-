@@ -12,7 +12,7 @@ class NPLApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'NPL Marketing Platform',
+      title: 'NPL app',
       theme: NPLTheme.lightTheme,
       home: const NPLHomeScreen(),
       debugShowCheckedModeBanner: false,
