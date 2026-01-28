@@ -1,7 +1,7 @@
-import 'package:figma/npl_theme.dart';
+import 'package:npl_app/npl_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:figma/widgets/nav_bar.dart';
-import 'package:figma/widgets/footer.dart';
+import 'package:npl_app/widgets/nav_bar.dart';
+import 'package:npl_app/widgets/footer.dart';
 
 class ProjectPage extends StatelessWidget {
   const ProjectPage({super.key});

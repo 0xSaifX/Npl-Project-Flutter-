@@ -1,5 +1,5 @@
 import 'dart:async';
-import 'package:figma/npl_theme.dart';
+import 'package:npl_app/npl_theme.dart';
 import 'package:flutter/material.dart';
 
 class HeroSection extends StatefulWidget {

@@ -1,4 +1,4 @@
-import 'package:figma/npl_theme.dart';
+import 'package:npl_app/npl_theme.dart';
 import 'package:flutter/material.dart';
 
 class PopularSection extends StatelessWidget {
@@ -22,10 +22,7 @@ class PopularSection extends StatelessWidget {
           const SizedBox(height: 10),
           Text(
             "오늘 가장 많이 조회된 NPL 매물",
-            style: TextStyle(
-              fontSize: 14,
-              color: Colors.grey[500],
-            ),
+            style: TextStyle(fontSize: 14, color: Colors.grey[500]),
           ),
           const SizedBox(height: 50),
           SizedBox(
@@ -93,7 +90,9 @@ class _PopularCard extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
-              color: isActive ? Colors.white.withValues(alpha: 0.2) : Colors.grey[100],
+              color: isActive
+                  ? Colors.white.withValues(alpha: 0.2)
+                  : Colors.grey[100],
               borderRadius: BorderRadius.circular(5),
             ),
             child: Text(
@@ -119,17 +118,21 @@ class _PopularCard extends StatelessWidget {
             description,
             style: TextStyle(
               fontSize: 14,
-              color: isActive ? Colors.white.withValues(alpha: 0.8) : Colors.grey[600],
+              color: isActive
+                  ? Colors.white.withValues(alpha: 0.8)
+                  : Colors.grey[600],
             ),
           ),
           const SizedBox(height: 20),
           Text(
             "2023년 6월 24일",
             style: TextStyle(
-               color: isActive ? Colors.white.withValues(alpha: 0.6) : Colors.grey[400],
-               fontSize: 12,
+              color: isActive
+                  ? Colors.white.withValues(alpha: 0.6)
+                  : Colors.grey[400],
+              fontSize: 12,
             ),
-          )
+          ),
         ],
       ),
     );

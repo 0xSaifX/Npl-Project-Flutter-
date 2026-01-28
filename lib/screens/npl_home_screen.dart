@@ -1,12 +1,12 @@
-import 'package:figma/widgets/brand_section.dart';
-import 'package:figma/widgets/faq_section.dart';
-import 'package:figma/widgets/footer.dart';
-import 'package:figma/widgets/hero_section.dart';
-import 'package:figma/widgets/latest_items_section.dart';
-import 'package:figma/widgets/media_section.dart';
-import 'package:figma/widgets/nav_bar.dart';
-import 'package:figma/widgets/popular_section.dart';
-import 'package:figma/widgets/service_section.dart';
+import 'package:npl_app/widgets/brand_section.dart';
+import 'package:npl_app/widgets/faq_section.dart';
+import 'package:npl_app/widgets/footer.dart';
+import 'package:npl_app/widgets/hero_section.dart';
+import 'package:npl_app/widgets/latest_items_section.dart';
+import 'package:npl_app/widgets/media_section.dart';
+import 'package:npl_app/widgets/nav_bar.dart';
+import 'package:npl_app/widgets/popular_section.dart';
+import 'package:npl_app/widgets/service_section.dart';
 import 'package:flutter/material.dart';
 
 class NPLHomeScreen extends StatelessWidget {

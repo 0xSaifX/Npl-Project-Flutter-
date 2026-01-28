@@ -1,5 +1,5 @@
-import 'package:figma/npl_theme.dart';
-import 'package:figma/screens/npl_home_screen.dart';
+import 'package:npl_app/npl_theme.dart';
+import 'package:npl_app/screens/npl_home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

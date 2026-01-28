@@ -1,4 +1,4 @@
-import 'package:figma/task_manager.dart';
+import 'package:npl_app/task_manager.dart';
 import 'package:flutter/material.dart';
 
 class ProjectCard extends StatelessWidget {

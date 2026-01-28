@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:figma/screens/guide_page.dart';
-import 'package:figma/screens/project_page.dart';
-import 'package:figma/screens/promotion_page.dart';
-import 'package:figma/screens/community_page.dart';
+import 'package:npl_app/screens/guide_page.dart';
+import 'package:npl_app/screens/project_page.dart';
+import 'package:npl_app/screens/promotion_page.dart';
+import 'package:npl_app/screens/community_page.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
