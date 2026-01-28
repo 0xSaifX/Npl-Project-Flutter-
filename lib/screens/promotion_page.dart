@@ -38,7 +38,7 @@ class _PromotionHeroSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           height: isMobile ? 250 : 350,
           decoration: BoxDecoration(
@@ -98,7 +98,7 @@ class _NPLIntroSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 60,
@@ -142,19 +142,23 @@ class _NPLIntroSection extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: const [
                   _CourseIntroCard(
-                    imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 수빈칸빈칸",
                   ),
                   _CourseIntroCard(
-                    imageUrl: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸 빈칸 빈칸빈칸",
                   ),
                   _CourseIntroCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 빈칸",
                   ),
                   _CourseIntroCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
                     title: "빈칸빈칸 빈칸",
                   ),
                 ],
@@ -171,10 +175,7 @@ class _CourseIntroCard extends StatelessWidget {
   final String imageUrl;
   final String title;
 
-  const _CourseIntroCard({
-    required this.imageUrl,
-    required this.title,
-  });
+  const _CourseIntroCard({required this.imageUrl, required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -196,7 +197,9 @@ class _CourseIntroCard extends StatelessWidget {
           Expanded(
             child: Container(
               decoration: BoxDecoration(
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(12),
+                ),
                 image: DecorationImage(
                   image: NetworkImage(imageUrl),
                   fit: BoxFit.cover,
@@ -229,7 +232,7 @@ class _CoursesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color(0xFFF9F9F9),
-    //   child: const _GreenBannerSection(),
+      //   child: const _GreenBannerSection(),
     );
   }
 }
@@ -243,7 +246,7 @@ class _GreenBannerSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           margin: EdgeInsets.symmetric(
             horizontal: isMobile ? 20 : 100,
@@ -252,10 +255,7 @@ class _GreenBannerSection extends StatelessWidget {
           padding: EdgeInsets.all(isMobile ? 30 : 40),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                const Color(0xFFD4F1C5),
-                const Color(0xFFB8E99F),
-              ],
+              colors: [const Color(0xFFD4F1C5), const Color(0xFFB8E99F)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -295,11 +295,7 @@ class _GreenBannerSection extends StatelessWidget {
                   ],
                 ),
               ),
-              if (!isMobile)
-                Text(
-                  "🌿",
-                  style: TextStyle(fontSize: 80),
-                ),
+              if (!isMobile) Text("🌿", style: TextStyle(fontSize: 80)),
             ],
           ),
         );
@@ -317,8 +313,9 @@ class _EducationSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        final isTablet = constraints.maxWidth >= 600 && constraints.maxWidth < 900;
-        
+        final isTablet =
+            constraints.maxWidth >= 600 && constraints.maxWidth < 900;
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 60,
@@ -369,42 +366,50 @@ class _EducationSection extends StatelessWidget {
                 physics: const NeverScrollableScrollPhysics(),
                 children: const [
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸빈칸 수빈칸빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸 빈칸 빈칸빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸빈칸 빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸빈칸 빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸빈칸빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸 빈칸빈칸 빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸 빈칸빈칸빈칸",
                   ),
                   _EducationCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=400",
                     category: "빈칸빈칸",
                     title: "빈칸빈칸 빈칸빈칸빈칸",
                   ),
@@ -432,9 +437,7 @@ class _FilterChip extends StatelessWidget {
       decoration: BoxDecoration(
         color: isActive ? Colors.black : Colors.white,
         borderRadius: BorderRadius.circular(25),
-        border: Border.all(
-          color: isActive ? Colors.black : Colors.grey[300]!,
-        ),
+        border: Border.all(color: isActive ? Colors.black : Colors.grey[300]!),
       ),
       child: Text(
         text,
@@ -507,7 +510,7 @@ class _BlogSection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           padding: EdgeInsets.symmetric(
             vertical: isMobile ? 40 : 60,
@@ -549,30 +552,38 @@ class _BlogSection extends StatelessWidget {
               Column(
                 children: const [
                   _BlogCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400",
-                    title: "빈칸빈칸빈칸빈칸빈칸빈칸 빈칸빈칸 빈칸빈칸 빈칸빈칸빈칸",
-                    description: "빈칸빈칸 빈칸빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=400",
+                    title: "빈칸",
+                    description:
+                        "  빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
                     date: "2025 4.5",
                   ),
                   SizedBox(height: 20),
                   _BlogCard(
-                    imageUrl: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
-                    title: "빈칸빈칸빈칸빈칸빈칸빈칸빈칸 빈칸빈칸빈칸 빈칸빈칸",
-                    description: "빈칸빈칸 빈칸빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=400",
+                    title: "빈칸 빈칸 ",
+                    description:
+                        "  빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
                     date: "2025 4.5 ",
                   ),
                   SizedBox(height: 20),
                   _BlogCard(
-                    imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
-                    title: "빈칸빈칸 빈칸빈칸 빈칸빈칸 빈칸빈칸 빈칸빈칸빈칸",
-                    description: "빈칸빈칸 빈칸빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=400",
+                    title: "    빈칸",
+                    description:
+                        "  빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
                     date: "2025 4.5 ",
                   ),
                   SizedBox(height: 20),
                   _BlogCard(
-                    imageUrl: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
-                    title: "빈칸빈칸빈칸빈칸빈칸빈칸 빈칸빈칸 빈칸빈칸",
-                    description: "빈칸빈칸 빈칸빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
+                    imageUrl:
+                        "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=400",
+                    title: "  ",
+                    description:
+                        "  빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸 빈칸",
                     date: "2025 4.5 ",
                   ),
                 ],
@@ -586,13 +597,14 @@ class _BlogSection extends StatelessWidget {
                     children: [
                       Text(
                         "빈칸 빈칸",
-                        style: TextStyle(
-                          color: Colors.grey[700],
-                          fontSize: 14,
-                        ),
+                        style: TextStyle(color: Colors.grey[700], fontSize: 14),
                       ),
                       const SizedBox(width: 5),
-                      Icon(Icons.arrow_forward, size: 16, color: Colors.grey[700]),
+                      Icon(
+                        Icons.arrow_forward,
+                        size: 16,
+                        color: Colors.grey[700],
+                      ),
                     ],
                   ),
                 ),
@@ -623,7 +635,7 @@ class _BlogCard extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           decoration: BoxDecoration(
             color: Colors.white,
@@ -643,7 +655,9 @@ class _BlogCard extends StatelessWidget {
                     Container(
                       height: 150,
                       decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                        borderRadius: const BorderRadius.vertical(
+                          top: Radius.circular(12),
+                        ),
                         image: DecorationImage(
                           image: NetworkImage(imageUrl),
                           fit: BoxFit.cover,
@@ -695,7 +709,9 @@ class _BlogCard extends StatelessWidget {
                       width: 200,
                       height: 150,
                       decoration: BoxDecoration(
-                        borderRadius: const BorderRadius.horizontal(left: Radius.circular(12)),
+                        borderRadius: const BorderRadius.horizontal(
+                          left: Radius.circular(12),
+                        ),
                         image: DecorationImage(
                           image: NetworkImage(imageUrl),
                           fit: BoxFit.cover,
@@ -758,7 +774,7 @@ class _BottomCTASection extends StatelessWidget {
     return LayoutBuilder(
       builder: (context, constraints) {
         final isMobile = constraints.maxWidth < 600;
-        
+
         return Container(
           margin: EdgeInsets.symmetric(
             horizontal: isMobile ? 20 : 100,
@@ -767,10 +783,7 @@ class _BottomCTASection extends StatelessWidget {
           padding: EdgeInsets.all(isMobile ? 40 : 60),
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              colors: [
-                const Color(0xFF4A90E2),
-                const Color(0xFF357ABD),
-              ],
+              colors: [const Color(0xFF4A90E2), const Color(0xFF357ABD)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -810,11 +823,7 @@ class _BottomCTASection extends StatelessWidget {
                   ],
                 ),
               ),
-              if (!isMobile)
-                Text(
-                  "📦",
-                  style: TextStyle(fontSize: 80),
-                ),
+              if (!isMobile) Text("📦", style: TextStyle(fontSize: 80)),
             ],
           ),
         );
